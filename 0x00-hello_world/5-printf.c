@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  * Write a C program that prints exactly with proper grammar,
- * 
+ *
  * main -entry point of program
  *
  * Return: zero if error,non zero if no error
