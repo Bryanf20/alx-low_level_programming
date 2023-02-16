@@ -1,5 +1,5 @@
 #include <stdio.h>
-/*
+/**
  * main -entry point of program
  *
  * Return: zero if error,non zero if no error
