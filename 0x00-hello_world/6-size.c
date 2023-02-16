@@ -1,6 +1,12 @@
 #include<stdio.h>
 /*
- * Write a C program that prints the size of various types on the computer it is compiled and run on.*/
+ * Write a C program that prints the size of various
+ * types on the computer it is compiled and run on
+ *
+ * main -entry point of program
+ *
+ * Return: zero if error,non zero if no error
+ */
 int main(void)
 {
 	printf("Size of a char: %ld byte(s)\n", sizeof(char));
