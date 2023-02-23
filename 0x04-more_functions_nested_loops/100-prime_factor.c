@@ -1,24 +1,21 @@
-include <stdio.h>
+#include "main.h"
 
 /**
- * main -  checks for checks for a digit (0 through 9).
- *
- * Return: Always 0.
+ * print_number - Prints an integer.
+ * @n: n is integer to be printed.
  */
-int main(void)
+void print_number(int n)
 {
-	long x, y;
+	unsigned int number = n;
 
-	x = 612852475143;
-
-	for (y = 2; x > y; y++)
+	if (n < 0)
 	{
-		while (x % y == 0)
-		{
-			x = x / y;
-		}
+		_putchar('-');
+		number = -number;
 	}
-	printf("%lu", y);
-	putchar('\n');
-	return (0);
+
+	if ((number / 10) > 0)
+		print_number(number / 10);
+
+	_putchar((number % 10) + '0');
 }
