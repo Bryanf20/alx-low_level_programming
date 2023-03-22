@@ -1,35 +1,28 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "3-calc.h"
+#ifndef CALC_H
+#define CALC_H
+
+/*
+ * File: 3-calc.h
+ * Desc: Header file containing all structures and
+ *       prototypes used by the 3-main.c program.
+ */
 
 /**
- * main - performs imple operations and print result
- * @argc: number of arguments passed
- * @argv: array of pointers to arguments
- *
- * Return: 0
+ * struct op - A struct op.
+ * @op: The operator.
+ * @f: Function associated.
  */
-int main(int argc, char *argv[])
+typedef struct op
 {
-	int (*func)(int, int);
-	int num1, num2, a;
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
 
-	if (argc != 4)
-	{
-		printf("Error\n");
-		exit(98);
-	}
-	num1 = atoi(argv[1]);
-	num2 = atoi(argv[3]);
-	func = get_op_func(argv[2]);
+int op_add(int a, int b);
+int op_sub(int a, int b);
+int op_mul(int a, int b);
+int op_div(int a, int b);
+int op_mod(int a, int b);
+int (*get_op_func(char *s))(int, int);
 
-	if (func == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
-
-	a = func(num1, num2);
-	printf("%d\n", a);
-	return (0);
-}
+#endif
