@@ -3,21 +3,21 @@
 #include "lists.h"
 
 /**
- * list_len - finds numbers of nodes in a linked list
- * @h: pointer to head of linked list to find the size of
- *
- * Return: number of nodes in the list
- */
+* list_len - returns the number of elements in a linked_list
+* @h: pointer to the struct linked_list
+* Return: number of elements
+**/
 
 size_t list_len(const list_t *h)
 {
-	int nodes = 0;
+	size_t elements;
 
-	while (h != NULL)
+	elements = 0;
+	while (h)
 	{
-		nodes++;
 		h = h->next;
+		elements += 1;
 	}
 
-	return (nodes);
+	return (elements);
 }
