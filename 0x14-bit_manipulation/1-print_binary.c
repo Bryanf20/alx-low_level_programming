@@ -2,7 +2,7 @@
 
 /**
 * print_binary - a function that prints the binary
-*representation of a number.
+* representation of a number.
 * @n: long integer
 *
 * Return: nothing
