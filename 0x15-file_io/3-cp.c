@@ -84,7 +84,7 @@ void check100(int chk, int fd)
 }
 /**
  * main - opies the content of a file to another file.
- * @argc: number of arguments passed
+ * @arg: number of arguments passed
  * @argv: array of pointers to the arguments
  *
  * Return: 0 on success
