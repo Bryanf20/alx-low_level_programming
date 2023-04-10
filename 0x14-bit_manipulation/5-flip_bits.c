@@ -7,17 +7,23 @@
 * @n: first number
 * @m: second number
 *
-* Return: number of bits
+* Return: number of bits to flip
 */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int n_bit, mid;
+	unsigned long int chk = 1;
+	unsigned long int mid;
+	unsigned int n_bit = 0;
+	unsigned int i;
 
 	mid = n ^ m;
-	n_bit = 0;
-  
-	for (n_bit = 0; mid != 0; n_bit += 1)
-		mid &= (mid - 1);
+
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
+	{
+		if (check == (mid & chk))
+			n_bit++;
+		chk <<= 1;
+	}
 	return (n_bit);
 }
